@@ -150,7 +150,7 @@ p { margin: 0 0 1.1rem; }
 .hero-deck { margin-top: 1.6rem; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--ink-dim); max-width: 52ch; line-height: 1.55; }
 .hero-meta { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: 12px 28px; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
 .hero-meta b { color: var(--ink-dim); font-weight: 400; }
-.scroll-cue { position: relative; margin-top: 60px; left: 50%; transform: translateX(-50%); z-index: 2; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-faint); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.scroll-cue { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 2; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-faint); display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .scroll-cue .bar { width: 1px; height: 38px; background: linear-gradient(var(--ink-faint), transparent); animation: cue 2.4s ease-in-out infinite; }
 @keyframes cue { 0%,100% { opacity: .3; transform: scaleY(.6); } 50% { opacity: 1; transform: scaleY(1); } }
 
@@ -343,4 +343,11 @@ p { margin: 0 0 1.1rem; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .scroll-cue .bar { animation: none; }
   .fdbeam { animation: none; transform: translateX(300px); }   /* static: light rests on the interaction */
+}
+
+/* Hide scroll cue on short screens to prevent overlap */
+@media (max-height: 750px) {
+  .scroll-cue {
+    display: none;
+  }
 }
