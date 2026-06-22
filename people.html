@@ -4,165 +4,201 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>People — Simons Collaboration on Dark Matter Dynamics</title>
-  <meta name="description" content="Principal Investigators of the Simons Collaboration on Dark Matter Dynamics.">
+  <meta name="description" content="The Principal Investigators of the Simons Collaboration on Dark Matter Dynamics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">Dark Matter <span>Dynamics</span></div>
-      <nav class="nav">
-        <a href="index.html">About</a>
-        <a href="people.html" class="active">People</a>
-      </nav>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="Home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="rgba(255,255,255,0.18)"/>
+        <circle cx="20" cy="20" r="2.4" fill="#4ee0d6"/>
+        <circle cx="31" cy="20" r="1.6" fill="#bcd0ec"/><circle cx="9" cy="20" r="1.6" fill="#bcd0ec"/>
+        <circle cx="20" cy="9" r="1.6" fill="#bcd0ec"/><circle cx="20" cy="31" r="1.6" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="12.2" r="1.4" fill="#bcd0ec"/><circle cx="12.2" cy="27.8" r="1.4" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="27.8" r="2.6" fill="#ff7a33"/><circle cx="12.2" cy="12.2" r="1.4" fill="#bcd0ec"/>
+      </svg>
+      <span class="wordmark">Dark Matter Dynamics<span>Simons Collaboration</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html#research">Research</a>
+      <a href="people.html" aria-current="page">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+
+  <!-- ============ PAGE HEAD ============ -->
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">The team</p>
+      <h1 class="h-display">People</h1>
+      <p>Ten founding Principal Investigators in particle physics, numerical simulation, semi-analytic
+        modeling, and dynamical analysis — supported by postdoctoral researchers, graduate students, and a
+        network of affiliated collaborators across eight institutions.</p>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>People</h1>
-      <p>The Collaboration brings together ten founding Principal Investigators in particle
-         physics, numerical simulation, semi-analytic modeling, and dynamical analysis, supported
-         by postdoctoral researchers, graduate students, and a network of affiliated collaborators.</p>
-    </div>
-  </section>
-
   <main>
-    <div class="container">
+    <!-- ============ PRINCIPAL INVESTIGATORS ============
+         To add a person: copy one .person block and edit the fields.
+         For a new photo, drop a file in images/ and update the src. -->
+    <section class="section" id="pis">
+      <div class="wrap">
+        <div class="group-head reveal">
+          <p class="eyebrow cool">Principal Investigators</p>
+        </div>
+        <div class="people-grid reveal">
 
-      <!-- ============================================================
-           PRINCIPAL INVESTIGATORS
-           To add a person: copy one .person block and edit the fields.
-           Replace the initials <div class="avatar"> with
-           <img class="avatar" src="images/lastname.jpg" alt="Name"> for a photo.
-           ============================================================ -->
-      <section class="people-group" id="pis">
-        <h2>Principal Investigators</h2>
-        <div class="people-grid">
+          <article class="person">
+            <div class="frame"><img src="images/brooks.jpg" alt="Alyson Brooks" loading="lazy"></div>
+            <p class="pname">Alyson Brooks</p>
+            <p class="paffil">Rutgers University</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/brooks.jpg" alt="Alyson Brooks" loading="lazy">
-            <p class="name">Alyson Brooks</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">Rutgers University</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/cyr-racine.jpg" alt="Francis-Yan Cyr-Racine" loading="lazy"></div>
+            <p class="pname">Francis-Yan Cyr-Racine</p>
+            <p class="paffil">University of New Mexico</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/cyr-racine.jpg" alt="Francis-Yan Cyr-Racine" loading="lazy">
-            <p class="name">Francis-Yan Cyr-Racine</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of New Mexico</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/diemer.jpg" alt="Benedikt Diemer" loading="lazy"></div>
+            <p class="pname">Benedikt Diemer</p>
+            <p class="paffil">University of Maryland</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/diemer.jpg" alt="Benedikt Diemer" loading="lazy">
-            <p class="name">Benedikt Diemer</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of Maryland</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/essig.jpg" alt="Rouven Essig" loading="lazy"></div>
+            <p class="pname">Rouven Essig</p>
+            <p class="paffil">Stony Brook University</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/essig.jpg" alt="Rouven Essig" loading="lazy">
-            <p class="name">Rouven Essig</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">Stony Brook University</p>
-          </div>
+          <article class="person">
+            <div class="frame"><span class="role-pill">Director</span><img src="images/kaplinghat.jpg" alt="Manoj Kaplinghat" loading="lazy"></div>
+            <p class="pname">Manoj Kaplinghat</p>
+            <p class="paffil">UC Irvine</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/kaplinghat.jpg" alt="Manoj Kaplinghat" loading="lazy">
-            <p class="name">Manoj Kaplinghat</p>
-            <p class="role">Director</p>
-            <p class="affil">University of California, Irvine</p>
-          </div>
+          <article class="person">
+            <div class="frame"><span class="role-pill">Deputy Director</span><img src="images/lisanti.jpg" alt="Mariangela Lisanti" loading="lazy"></div>
+            <p class="pname">Mariangela Lisanti</p>
+            <p class="paffil">Princeton University</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/lisanti.jpg" alt="Mariangela Lisanti" loading="lazy">
-            <p class="name">Mariangela Lisanti</p>
-            <p class="role">Deputy Director</p>
-            <p class="affil">Princeton University</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/nadler.png" alt="Ethan Nadler" loading="lazy"></div>
+            <p class="pname">Ethan Nadler</p>
+            <p class="paffil">UC San Diego</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/nadler.png" alt="Ethan Nadler" loading="lazy">
-            <p class="name">Ethan Nadler</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of California, San Diego</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/sales.jpg" alt="Laura Sales" loading="lazy"></div>
+            <p class="pname">Laura Sales</p>
+            <p class="paffil">UC Riverside</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/sales.jpg" alt="Laura Sales" loading="lazy">
-            <p class="name">Laura Sales</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of California, Riverside</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/torrey.png" alt="Paul Torrey" loading="lazy"></div>
+            <p class="pname">Paul Torrey</p>
+            <p class="paffil">University of Virginia</p>
+          </article>
 
-          <div class="person">
-            <img class="avatar" src="images/torrey.png" alt="Paul Torrey" loading="lazy">
-            <p class="name">Paul Torrey</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of Virginia</p>
-          </div>
-
-          <div class="person">
-            <img class="avatar" src="images/yu.png" alt="Hai-Bo Yu" loading="lazy">
-            <p class="name">Hai-Bo Yu</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">University of California, Riverside</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/yu.png" alt="Hai-Bo Yu" loading="lazy"></div>
+            <p class="pname">Hai-Bo Yu</p>
+            <p class="paffil">UC Riverside</p>
+          </article>
 
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ============================================================
-           POSTDOCS & GRADUATE STUDENTS  (to be added)
-           The Collaboration includes 4 postdoctoral researchers and 6
-           graduate students across Princeton, UC San Diego, UC Riverside,
-           and the University of Virginia. Uncomment and fill in as members
-           are named.
-           ============================================================
-      <section class="people-group" id="trainees">
-        <h2>Postdoctoral Researchers &amp; Graduate Students</h2>
+    <!-- ============ POSTDOCS & STUDENTS (to be added) ============
+         The collaboration includes 4 postdoctoral researchers and 6 graduate
+         students across Princeton, UC San Diego, UC Riverside, and UVA.
+         Uncomment and populate this section as members are named.
+    <section class="section" id="trainees">
+      <div class="wrap">
+        <div class="group-head"><p class="eyebrow cool">Postdocs &amp; Students</p></div>
         <div class="people-grid">
-          <div class="person">
-            <div class="avatar">&nbsp;</div>
-            <p class="name">Name</p>
-            <p class="role">Postdoctoral Researcher</p>
-            <p class="affil">Institution</p>
-          </div>
+          <article class="person">
+            <div class="frame"><img src="images/PHOTO.jpg" alt="NAME"></div>
+            <p class="pname">Name</p>
+            <p class="paffil">Postdoctoral Researcher · Institution</p>
+          </article>
         </div>
-      </section>
-      -->
+      </div>
+    </section>
+    -->
 
-      <!-- ============================================================
-           AFFILIATED / EXTERNAL COLLABORATORS  (to be added)
-           Unfunded external researchers contributing specialized expertise,
-           e.g. Simeon Bird, Frank van den Bosch, Marla Geha, Jenny Greene,
-           Ana Bonaca, Ting Li, Simon Birrer, Daniel Gilman, Anna Nierenberg,
-           Akaxia Cruz, Alex Drlica-Wagner, Ferah Munshi.
-           ============================================================
-      <section class="people-group" id="affiliates">
-        <h2>Affiliated Collaborators</h2>
-        <div class="people-grid">
-          <div class="person">
-            <div class="avatar">&nbsp;</div>
-            <p class="name">Name</p>
-            <p class="role">&nbsp;</p>
-            <p class="affil">Institution</p>
-          </div>
-        </div>
-      </section>
-      -->
-
-    </div>
+    <!-- ============ AFFILIATED COLLABORATORS (to be added) ============
+         Unfunded external researchers contributing specialized expertise, e.g.
+         Simeon Bird, Frank van den Bosch, Marla Geha, Jenny Greene, Ana Bonaca,
+         Ting Li, Simon Birrer, Daniel Gilman, Anna Nierenberg, Akaxia Cruz,
+         Alex Drlica-Wagner, Ferah Munshi.
+    <section class="section" id="affiliates">
+      <div class="wrap">
+        <div class="group-head"><p class="eyebrow cool">Affiliated Collaborators</p></div>
+        <div class="people-grid"> ... </div>
+      </div>
+    </section>
+    -->
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container">
-      <span>Simons Collaboration on Dark Matter Dynamics</span>
-      <span>Launching Fall 2026</span>
+    <div class="wrap">
+      <div class="ack">
+        <svg class="ack-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="34" stroke="rgba(78,224,214,0.5)" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="6" fill="#4ee0d6"/>
+          <circle cx="94" cy="60" r="4" fill="#bcd0ec"/><circle cx="26" cy="60" r="4" fill="#bcd0ec"/>
+          <circle cx="60" cy="26" r="4" fill="#bcd0ec"/><circle cx="60" cy="94" r="4" fill="#bcd0ec"/>
+          <circle cx="84" cy="84" r="7" fill="#ff7a33"/><circle cx="36" cy="36" r="4" fill="#bcd0ec"/>
+          <circle cx="84" cy="36" r="4" fill="#bcd0ec"/><circle cx="36" cy="84" r="4" fill="#bcd0ec"/>
+        </svg>
+        <div>
+          <p class="ack-text">This research is supported by the <b>Simons Foundation</b> through the
+            Simons Collaboration on Dark Matter Dynamics.</p>
+          <span class="ack-sub">Simons Foundation · Mathematics &amp; Physical Sciences</span>
+        </div>
+      </div>
+
+      <div class="foot-cols">
+        <div>
+          <p class="foot-brand">Simons Collaboration on Dark Matter Dynamics
+            <span>Testing whether dark matter carries a force</span></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html#research">Research</a>
+          <a href="people.html">People</a>
+          <a href="publications.html">Publications</a>
+          <a href="news.html">News</a>
+        </div>
+        <div>
+          <h4>Collaboration</h4>
+          <a href="https://www.simonsfoundation.org/" target="_blank" rel="noopener">Simons Foundation ↗</a>
+          <a href="https://github.com/Simons-Dark-Matter-Dynamics" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© 2026 Simons Collaboration on Dark Matter Dynamics</span>
+        <span>Launching Fall 2026</span>
+      </div>
     </div>
   </footer>
 
+  <script defer src="data/content.js"></script>
+  <script defer src="js/site.js"></script>
 </body>
 </html>

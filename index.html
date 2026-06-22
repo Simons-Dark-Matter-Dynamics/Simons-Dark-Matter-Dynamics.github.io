@@ -3,139 +3,345 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — Simons Collaboration on Dark Matter Dynamics</title>
-  <meta name="description" content="The Simons Collaboration on Dark Matter Dynamics builds the theoretical framework to test whether dark matter particles carry a short-range force.">
+  <title>Simons Collaboration on Dark Matter Dynamics</title>
+  <meta name="description" content="A Simons Foundation collaboration building the theoretical framework to test whether dark matter particles carry a short-range force — turning the coming flood of observations into tests of fundamental interactions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">Dark Matter <span>Dynamics</span></div>
-      <nav class="nav">
-        <a href="index.html" class="active">About</a>
-        <a href="people.html">People</a>
-      </nav>
-    </div>
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="Home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="rgba(255,255,255,0.18)"/>
+        <circle cx="20" cy="20" r="2.4" fill="#4ee0d6"/>
+        <circle cx="31" cy="20" r="1.6" fill="#bcd0ec"/><circle cx="9" cy="20" r="1.6" fill="#bcd0ec"/>
+        <circle cx="20" cy="9" r="1.6" fill="#bcd0ec"/><circle cx="20" cy="31" r="1.6" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="12.2" r="1.4" fill="#bcd0ec"/><circle cx="12.2" cy="27.8" r="1.4" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="27.8" r="2.6" fill="#ff7a33"/><circle cx="12.2" cy="12.2" r="1.4" fill="#bcd0ec"/>
+      </svg>
+      <span class="wordmark">Dark Matter Dynamics<span>Simons Collaboration</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav-links">
+      <a href="index.html#research">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+    </nav>
   </header>
 
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="container">
-      <h1>Simons Collaboration on Dark Matter Dynamics</h1>
-      <p>Building the theoretical framework to translate concrete particle-physics models of
-         short-range forces into self-consistent, falsifiable predictions on galactic and
-         sub-galactic scales — turning the coming flood of observations into tests of
-         fundamental interactions.</p>
-      <p class="pis"><strong>Director:</strong> Manoj Kaplinghat &nbsp;·&nbsp;
-         <strong>Deputy Director:</strong> Mariangela Lisanti</p>
+    <div class="halo-fig" aria-hidden="true">
+      <!-- t-channel scattering: two dark-matter particles (χ) exchange a mediator (φ).
+           A soft light beam sweeps left→right, "lighting" the interaction as it flows. -->
+      <svg class="feyn" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Feynman diagram: two dark matter particles scattering through a force mediator">
+        <defs>
+          <filter id="fdglow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3.4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="fdband" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#000"/>
+            <stop offset=".5" stop-color="#fff"/>
+            <stop offset="1" stop-color="#000"/>
+          </linearGradient>
+          <mask id="fdsweep" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="600">
+            <rect width="900" height="600" fill="#000"/>
+            <rect class="fdbeam" x="0" y="0" width="300" height="600" fill="url(#fdband)"/>
+          </mask>
+          <marker id="fdarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+            <path d="M0 1 L9 5 L0 9 z" fill="#8aa0c8"/>
+          </marker>
+          <path id="fdL1" d="M120 120 L285 175 L450 230" marker-mid="url(#fdarrow)"/>
+          <path id="fdL2" d="M450 230 L615 175 L780 120" marker-mid="url(#fdarrow)"/>
+          <path id="fdL3" d="M120 480 L285 425 L450 370" marker-mid="url(#fdarrow)"/>
+          <path id="fdL4" d="M450 370 L615 425 L780 480" marker-mid="url(#fdarrow)"/>
+          <path id="fdMed" d="M450 230 C470 242 470 252 450 264 C430 276 430 286 450 298
+                              C470 310 470 320 450 332 C430 344 430 354 450 366 L450 370"/>
+        </defs>
+
+        <!-- dim base layer (always visible) -->
+        <g class="fd-dim">
+          <use href="#fdL1"/><use href="#fdL2"/><use href="#fdL3"/><use href="#fdL4"/>
+          <use href="#fdMed" class="fd-med"/>
+          <circle class="fd-vtx" cx="450" cy="230" r="6"/>
+          <circle class="fd-vtx" cx="450" cy="370" r="6"/>
+        </g>
+
+        <!-- bright layer, revealed only through the moving beam -->
+        <g class="fd-lit" mask="url(#fdsweep)" filter="url(#fdglow)">
+          <use href="#fdL1"/><use href="#fdL2"/><use href="#fdL3"/><use href="#fdL4"/>
+          <use href="#fdMed" class="fd-med"/>
+          <circle class="fd-vtx" cx="450" cy="230" r="6"/>
+          <circle class="fd-vtx" cx="450" cy="370" r="6"/>
+        </g>
+
+        <g class="fd-labels">
+          <text x="106" y="112">χ</text>
+          <text x="794" y="112" text-anchor="end">χ</text>
+          <text x="106" y="498">χ</text>
+          <text x="794" y="498" text-anchor="end">χ</text>
+          <text x="478" y="302">φ</text>
+          <text class="cap" x="478" y="322">force mediator</text>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap">
+      <svg class="hero-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="rgba(255,255,255,0.22)"/>
+        <circle cx="20" cy="20" r="11" stroke="rgba(78,224,214,0.45)"/>
+        <circle cx="20" cy="20" r="2.6" fill="#4ee0d6"/>
+        <circle cx="31" cy="20" r="1.6" fill="#bcd0ec"/><circle cx="9" cy="20" r="1.6" fill="#bcd0ec"/>
+        <circle cx="20" cy="9" r="1.6" fill="#bcd0ec"/><circle cx="20" cy="31" r="1.6" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="12.2" r="1.4" fill="#bcd0ec"/><circle cx="12.2" cy="27.8" r="1.4" fill="#bcd0ec"/>
+        <circle cx="27.8" cy="27.8" r="2.8" fill="#ff7a33"/><circle cx="12.2" cy="12.2" r="1.4" fill="#bcd0ec"/>
+      </svg>
+      <p class="eyebrow">Simons Collaboration</p>
+      <h1 class="h-display">Dark matter may carry a <span class="accent">force</span> of its own.</h1>
+      <p class="hero-deck">We build the theoretical framework that turns concrete particle-physics models
+        of short-range forces into self-consistent, falsifiable predictions on galactic and
+        sub-galactic scales — so the next decade of surveys can test fundamental interactions.</p>
+      <div class="hero-meta">
+        <span>Director&nbsp; <b>Manoj Kaplinghat</b></span>
+        <span>Deputy Director&nbsp; <b>Mariangela Lisanti</b></span>
+        <span>Launching&nbsp; <b>Fall 2026</b></span>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
+  </section>
+
+  <!-- ============ 01 · OVERVIEW ============ -->
+  <section class="section angled" id="overview">
+    <div class="wrap spotlight">
+      <div class="spot-figure reveal">
+        <div class="figcard">
+          <!-- dark-matter halo: dense core + scattered particles, one collisional (orange) -->
+          <svg viewBox="0 0 360 360" role="img" aria-label="Schematic of a dark matter halo">
+            <defs>
+              <radialGradient id="haloGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="rgba(78,224,214,0.20)"/>
+                <stop offset="55%" stop-color="rgba(78,224,214,0.05)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+            </defs>
+            <circle cx="180" cy="180" r="150" fill="url(#haloGlow)"/>
+            <circle cx="180" cy="180" r="150" class="fig-faint" fill="none" stroke-dasharray="2 7"/>
+            <circle cx="180" cy="180" r="104" class="fig-cdm" fill="none" stroke-opacity="0.45"/>
+            <circle cx="180" cy="180" r="58"  class="fig-cdm" fill="none" stroke-opacity="0.7"/>
+            <circle cx="180" cy="180" r="6" fill="#4ee0d6"/>
+            <!-- particles -->
+            <g fill="#bcd0ec">
+              <circle cx="118" cy="96" r="2.6"/><circle cx="250" cy="120" r="2.2"/>
+              <circle cx="276" cy="210" r="2.6"/><circle cx="206" cy="266" r="2.2"/>
+              <circle cx="96"  cy="206" r="2.4"/><circle cx="150" cy="150" r="2"/>
+              <circle cx="222" cy="168" r="2"/><circle cx="132" cy="232" r="2.2"/>
+              <circle cx="300" cy="160" r="1.8"/><circle cx="84" cy="140" r="1.8"/>
+            </g>
+            <!-- a collisional (orange) particle with a short interaction track -->
+            <path d="M243 250 q-16 -10 -30 -6" class="fig-sidm" fill="none" stroke-width="1.6" stroke-dasharray="3 4"/>
+            <circle cx="245" cy="251" r="4.4" fill="#ff7a33"/>
+          </svg>
+          <p class="figcap">Dark-matter halo — a collisional particle exchanging momentum</p>
+        </div>
+      </div>
+      <div class="spot-body reveal">
+        <p class="eyebrow">01 · Overview</p>
+        <h2 class="title">85% of the matter in the Universe is dark — and we still don't know if it feels anything but gravity.</h2>
+        <p class="prose">The standard Cold Dark Matter paradigm assumes dark matter is cold and
+          <em>collisionless</em>. Current data are consistent with it being effectively cold for galaxy
+          formation, but the collisionless hypothesis remains poorly tested on galactic and sub-galactic
+          scales.</p>
+        <p class="prose">Data from the Vera C. Rubin Observatory, Euclid, JWST, and the Nancy Grace Roman
+          Space Telescope now have the statistical power and spatial resolution to detect the signatures
+          of <span class="text-sidm">collisional</span> dark matter — if we know what to look for.</p>
+        <div class="callout">
+          <p>Existing frameworks can't yet predict those signatures self-consistently across mass and time,
+          nor separate astrophysics from non-gravitational dark-matter dynamics. <strong>This collaboration
+          is built to remove that limitation.</strong></p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <div class="container">
-
-      <section id="overview">
-        <h2>Overview</h2>
-        <p class="lead">Dark matter (DM) makes up about 85% of the matter in the Universe, yet we
-          still do not know whether its particles interact through anything other than gravity.</p>
-        <p>The standard Cold Dark Matter paradigm assumes DM is cold and <em>collisionless</em>.
-          Current data are consistent with DM being effectively cold for galaxy formation, but the
-          collisionless hypothesis remains poorly tested on galactic and sub-galactic scales. Data
-          from the Vera C. Rubin Observatory, Euclid, JWST, and the Nancy Grace Roman Space
-          Telescope now have the statistical power and spatial resolution to detect signatures of
-          <em>collisional</em> dark matter.</p>
-        <div class="callout">
-          <p>Existing theoretical frameworks cannot yet predict these signatures self-consistently
-            across mass scales and time, nor cleanly separate astrophysical processes from
-            non-gravitational DM dynamics. <strong>Our Collaboration is built to remove that
-            limitation.</strong></p>
+  <!-- ============ 02 · THE PHYSICS ============ -->
+  <section class="section" id="physics">
+    <div class="wrap spotlight flip">
+      <div class="spot-figure reveal">
+        <div class="figcard">
+          <!-- gravothermal evolution of the central density profile -->
+          <svg viewBox="0 0 400 300" role="img"
+               aria-label="Density profiles: a collisionless cusp, a cored profile, and a gravothermally collapsed core">
+            <defs>
+              <marker id="evoArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0 1 L9 5 L0 9 z" fill="#ff7a33"/>
+              </marker>
+            </defs>
+            <!-- axes -->
+            <line x1="54" y1="28" x2="54" y2="256" class="fig-faint"/>
+            <line x1="54" y1="256" x2="372" y2="256" class="fig-faint"/>
+            <text x="40" y="40" class="fig-mono" font-size="13" text-anchor="end">&#961;</text>
+            <text x="372" y="278" class="fig-mono" font-size="13" text-anchor="end">r</text>
+            <!-- collisionless cusp (reference) -->
+            <path d="M62 56 C 120 96, 210 180, 360 238" class="fig-faint" fill="none" stroke-width="1.6"/>
+            <!-- cored profile -->
+            <path d="M62 126 C 132 130, 210 184, 360 240" class="fig-cdm" fill="none" stroke-width="2.4"/>
+            <!-- gravothermally collapsed core -->
+            <path d="M62 40 C 92 80, 150 184, 360 240" class="fig-sidm" fill="none" stroke-width="2.6"/>
+            <!-- evolution arrow: core -> collapse -->
+            <path d="M104 150 q-22 -34 -8 -78" class="fig-sidm" fill="none" stroke-width="1.4"
+                  stroke-dasharray="3 4" marker-end="url(#evoArrow)"/>
+            <!-- legend -->
+            <g class="fig-mono" font-size="11">
+              <line x1="232" y1="58"  x2="258" y2="58"  class="fig-faint" stroke-width="1.6"/>
+              <text x="266" y="62" fill="#5b6377">CDM cusp</text>
+              <line x1="232" y1="78"  x2="258" y2="78"  class="fig-cdm"  stroke-width="2.4"/>
+              <text x="266" y="82" fill="#4ee0d6">cored</text>
+              <line x1="232" y1="98"  x2="258" y2="98"  class="fig-sidm" stroke-width="2.6"/>
+              <text x="266" y="102" fill="#ff7a33">collapsed</text>
+            </g>
+          </svg>
+          <p class="figcap">Heat flows out (core), then reverses (gravothermal collapse)</p>
         </div>
-      </section>
-
-      <section id="why">
-        <h2>Why search for a short-range force between DM particles?</h2>
-        <p>Assuming DM interacts only gravitationally is a minimal working hypothesis, not a
-          data-driven conclusion. In fact, no other particle in the Standard Model behaves this way.
-          Short-range forces — the strong nuclear force, forces between atoms — are familiar and
-          ubiquitous, and arise generically in extensions of the Standard Model such as hidden-sector
-          gauge theories and asymmetric or composite dark matter.</p>
-        <p>Such self-interactions leave large cosmic scales — the Cosmic Microwave Background and
-          linear structure formation — essentially untouched. Their effects concentrate on smaller
-          scales, reshaping the internal structure of galaxies and their population statistics. A
-          discovery would reveal a new fundamental force beyond the four we know today.</p>
-      </section>
-
-      <section id="science">
-        <h2>How a new force reshapes galaxies</h2>
-        <p>A short-range force allows elastic and inelastic collisions between DM particles. These
-          microscopic interactions drive macroscopic heat flow through the DM halo around each
-          galaxy. As internal energy is redistributed, the halo's density — and the gravitational
-          potential felt by the central galaxy — changes.</p>
-        <p>In isolated halos, self-interactions first push heat outward, forming shallow "cored"
-          density profiles; eventually the flow reverses and the core undergoes runaway
-          <strong>gravothermal collapse</strong>, a uniquely SIDM phenomenon that may seed dense
-          dark substructures and even supermassive black holes. When a small halo falls into a
-          larger host, additional effects appear: evaporation mass loss, drag forces, and altered
-          orbits.</p>
-      </section>
-
-      <section id="aims">
-        <h2>Research program</h2>
-        <p>The Collaboration uses a coordinated, multi-tier modeling infrastructure — state-of-the-art
-          N-body and hydrodynamical simulations ((MP-)GADGET, AREPO, ChaNGa, GIZMO), calibrated
-          semi-analytic models, and machine learning — to identify observables that break the
-          degeneracy between DM dynamics and baryonic feedback across five environments.</p>
-        <ul class="aims">
-          <li>
-            <span class="tag">Aim 1 · Low velocity</span>
-            <h3>Low-mass galaxies</h3>
-            <p>Constraining low-velocity DM collisions with dwarf galaxies — clean, baryon-poor
-              laboratories for DM physics and rotation-curve diversity.</p>
-          </li>
-          <li>
-            <span class="tag">Aim 2 · Low / mid velocity</span>
-            <h3>Milky Way analogs</h3>
-            <p>Constraining DM collisions through satellite populations, tidal stripping, and
-              evaporation around Milky-Way-like hosts.</p>
-          </li>
-          <li>
-            <span class="tag">Aim 3 · Low / mid velocity</span>
-            <h3>Lensing galaxies</h3>
-            <p>Constraining DM collisions in strong-lens host galaxies via flux-ratio anomalies and
-              gravitational imaging perturbers.</p>
-          </li>
-          <li>
-            <span class="tag">Aim 4 · Mid / high velocity</span>
-            <h3>Galaxy clusters</h3>
-            <p>Constraining mid/high-velocity DM collisions with cluster zoom simulations and
-              satellite-galaxy and lensing-arc statistics.</p>
-          </li>
-          <li>
-            <span class="tag">Aim 5 · Low / mid velocity</span>
-            <h3>High redshifts</h3>
-            <p>Constraining DM collisions in the early Universe, including SIDM seeding of
-              supermassive black holes to compare with JWST "Little Red Dots."</p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="organization">
-        <h2>Organization &amp; activities</h2>
-        <p>The program is carried out by 10 founding Principal Investigators together with
-          postdoctoral researchers and graduate students distributed across Princeton, UC San Diego,
-          UC Riverside, and the University of Virginia. It is led by Director
-          <strong>Manoj Kaplinghat</strong> and Deputy Director <strong>Mariangela Lisanti</strong>.</p>
-      </section>
-
+      </div>
+      <div class="spot-body reveal">
+        <p class="eyebrow cool">02 · The Physics</p>
+        <h2 class="title">A short-range force would reshape galaxies from the inside out.</h2>
+        <p class="prose">Assuming dark matter interacts only gravitationally is a minimal working
+          hypothesis, not a data-driven conclusion — no other particle in the Standard Model behaves that
+          way. Short-range forces are familiar and ubiquitous, and arise generically in extensions of the
+          Standard Model. Such self-interactions leave the cosmic microwave background and large-scale
+          structure essentially untouched, concentrating their effects on smaller scales.</p>
+        <p class="prose">A short-range force lets dark-matter particles collide, driving heat through the
+          halo around each galaxy. Early on, heat flows outward and carves shallow
+          <em>cored</em> density profiles; eventually the flow reverses and the core undergoes runaway
+          <strong class="text-sidm">gravothermal collapse</strong> — a uniquely self-interacting
+          phenomenon that may seed dense dark substructures and even supermassive black holes. A discovery
+          would reveal a fifth fundamental force.</p>
+      </div>
     </div>
-  </main>
+  </section>
 
+  <!-- ============ 03 · RESEARCH (velocity ladder) ============ -->
+  <section class="section angled" id="research">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div>
+          <p class="eyebrow">03 · Research</p>
+          <h2 class="title">Five environments, one axis: collision velocity.</h2>
+          <p class="prose">We coordinate state-of-the-art N-body and hydrodynamical simulations
+            ((MP-)GADGET, AREPO, ChaNGa, GIZMO), calibrated semi-analytic models, and machine learning to
+            find observables that break the degeneracy between dark-matter dynamics and baryonic feedback —
+            from the slowest collisions in dwarf galaxies to the fastest in galaxy clusters.</p>
+        </div>
+      </div>
+
+      <div class="ladder reveal">
+        <div class="rung" style="--dot:#4ee0d6">
+          <span class="node"></span>
+          <div class="vlabel"><span class="aimno">Aim 01</span><span>Low velocity</span></div>
+          <h3>Low-mass galaxies</h3>
+          <p>Dwarf galaxies are the smallest, most baryon-poor halos known — clean laboratories for
+            constraining low-velocity dark-matter collisions and explaining rotation-curve diversity.</p>
+        </div>
+        <div class="rung" style="--dot:#84cf9d">
+          <span class="node"></span>
+          <div class="vlabel"><span class="aimno">Aim 02</span><span>Low / mid velocity</span></div>
+          <h3>Milky Way analogs</h3>
+          <p>Satellite populations around Milky-Way-like hosts encode tidal stripping, evaporation, and
+            drag — disentangling dark-matter physics from baryonic feedback.</p>
+        </div>
+        <div class="rung" style="--dot:#c2bd76">
+          <span class="node"></span>
+          <div class="vlabel"><span class="aimno">Aim 03</span><span>Low / mid velocity</span></div>
+          <h3>Lensing galaxies</h3>
+          <p>Strong-lens host galaxies turn substructure into a measurable signal through flux-ratio
+            anomalies and gravitational imaging perturbers.</p>
+        </div>
+        <div class="rung" style="--dot:#ee9a52">
+          <span class="node"></span>
+          <div class="vlabel"><span class="aimno">Aim 04</span><span>Mid / high velocity</span></div>
+          <h3>Galaxy clusters</h3>
+          <p>The fastest collisions occur in clusters: zoom simulations plus satellite-galaxy and
+            lensing-arc statistics probe the high-velocity regime.</p>
+        </div>
+        <div class="rung" style="--dot:#ff7a33">
+          <span class="node"></span>
+          <div class="vlabel"><span class="aimno">Aim 05</span><span>Low / mid velocity · high redshift</span></div>
+          <h3>The early Universe</h3>
+          <p>At high redshift, gravothermal seeding of supermassive black holes can be confronted with
+            JWST "Little Red Dots" and luminous quasars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS (top 3) ============ -->
+  <section class="section" id="news">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <div>
+          <p class="eyebrow">Latest</p>
+          <h2 class="title">News</h2>
+        </div>
+        <a class="btn-ghost" href="news.html">All news</a>
+      </div>
+      <div class="news-feature reveal" id="news-featured"><!-- rendered from data/content.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container">
-      <span>Simons Collaboration on Dark Matter Dynamics</span>
-      <span>Launching Fall 2026</span>
+    <div class="wrap">
+      <div class="ack">
+        <svg class="ack-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="34" stroke="rgba(78,224,214,0.5)" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="6" fill="#4ee0d6"/>
+          <circle cx="94" cy="60" r="4" fill="#bcd0ec"/><circle cx="26" cy="60" r="4" fill="#bcd0ec"/>
+          <circle cx="60" cy="26" r="4" fill="#bcd0ec"/><circle cx="60" cy="94" r="4" fill="#bcd0ec"/>
+          <circle cx="84" cy="84" r="7" fill="#ff7a33"/><circle cx="36" cy="36" r="4" fill="#bcd0ec"/>
+          <circle cx="84" cy="36" r="4" fill="#bcd0ec"/><circle cx="36" cy="84" r="4" fill="#bcd0ec"/>
+        </svg>
+        <div>
+          <p class="ack-text">This research is supported by the <b>Simons Foundation</b> through the
+            Simons Collaboration on Dark Matter Dynamics.</p>
+          <span class="ack-sub">Simons Foundation · Mathematics &amp; Physical Sciences</span>
+        </div>
+      </div>
+
+      <div class="foot-cols">
+        <div>
+          <p class="foot-brand">Simons Collaboration on Dark Matter Dynamics
+            <span>Testing whether dark matter carries a force</span></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html#research">Research</a>
+          <a href="people.html">People</a>
+          <a href="publications.html">Publications</a>
+          <a href="news.html">News</a>
+        </div>
+        <div>
+          <h4>Collaboration</h4>
+          <a href="https://www.simonsfoundation.org/" target="_blank" rel="noopener">Simons Foundation ↗</a>
+          <a href="https://github.com/Simons-Dark-Matter-Dynamics" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© 2026 Simons Collaboration on Dark Matter Dynamics</span>
+        <span>Launching Fall 2026</span>
+      </div>
     </div>
   </footer>
 
+  <script defer src="data/content.js"></script>
+  <script defer src="js/site.js"></script>
 </body>
 </html>
