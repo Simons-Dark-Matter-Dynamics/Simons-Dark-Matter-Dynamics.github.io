@@ -6,18 +6,18 @@ Website for the Simons Collaboration on Dark Matter Dynamics.
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Home — hero, overview, the physics, the five research Aims (a velocity ladder), and the 3 latest news items. |
-| `people.html` | The ten Principal Investigators (extensible to trainees & collaborators). |
+| `index.html` | Home — hero, overview, etc. |
+| `people.html` | The PIs, and extensible to trainees/collaborators/etc. |
 | `news.html` | Full news list. |
-| `publications.html` | Publications, grouped by year. |
-| `data/content.js` | **The content you edit** — news and publications live here. |
+| `publications.html` | Place for listing publications. |
+| `data/content.js` | **The content we edit** — news + publications live here. |
 | `js/site.js` | Hero animation, nav, scroll reveals, and rendering of news/publications. |
 | `styles.css` | The full design system. |
-| `images/` | PI headshots. |
+| `images/` | Currently just PI headshots. Grabbed these from your websites.  |
 
 ## Updating content (the easy part)
 
-**News and publications are data-driven.** Open `data/content.js` and edit the
+**News and publications.** Open `data/content.js` and edit the
 arrays — no HTML required. Items are sorted by date automatically.
 
 - **Add news:** add an object to `SITE_NEWS` with `date`, `title`, `summary`,
@@ -32,13 +32,13 @@ arrays — no HTML required. Items are sorted by date automatically.
 In `people.html`, copy one `.person` block and edit the name and affiliation;
 drop the headshot in `images/` and point the `src` at it. Use
 `<span class="role-pill">…</span>` inside `.frame` for a Director-style badge.
-The file also has commented-out, ready-to-fill sections for **postdocs/students**
-and **affiliated collaborators**.
+The file also has commented-out sections for **postdocs/students**
+and **affiliated collaborators**, if we want.
 
 ## Local preview
 
 The data files use plain global arrays, so the site works when opened directly
-**or** over a server. A server is recommended:
+**or** over a server. If you want to use a server:
 
 ```bash
 python3 -m http.server 8000   # then visit http://localhost:8000
@@ -46,9 +46,7 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## Notes
 
-- The big footer on every page carries the **Simons Foundation** acknowledgment.
-  Drop the official Simons Foundation logo into `images/` and swap the inline
-  `.ack-mark` SVG for it if/when you'd like.
+- The footer on every page carries the **Simons Foundation** acknowledgment.
 - Fonts (Fraunces, Space Grotesk, Space Mono) load from Google Fonts.
 - The hero animation respects `prefers-reduced-motion` (renders a static frame).
 
