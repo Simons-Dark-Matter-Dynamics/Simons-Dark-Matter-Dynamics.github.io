@@ -124,7 +124,7 @@ p { margin: 0 0 1.1rem; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line-2); border-radius: 8px; color: var(--ink); width: 42px; height: 38px; cursor: pointer; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding-bottom: clamp(48px, 8vh, 96px); overflow: hidden; }
+.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding-bottom: clamp(110px, 8vh, 96px); overflow: hidden; }
 /* Feynman-diagram hero figure (replaces the old particle canvas) */
 .hero .halo-fig { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
 .hero .halo-fig .feyn { width: min(118%, 1060px); height: auto; max-height: 86%; transform: translateY(-5%); }
