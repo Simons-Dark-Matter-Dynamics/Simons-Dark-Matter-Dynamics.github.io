@@ -164,6 +164,8 @@ p { margin: 0 0 1.1rem; }
 /* callout */
 .callout { border-left: 2px solid var(--sidm); background: var(--sidm-soft); padding: 20px 24px; border-radius: 0 10px 10px 0; color: var(--ink); margin: 1.6rem 0 0; }
 .callout p { margin: 0; }
+#about .prose a, #about .callout a { color: var(--sidm); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: rgba(255,122,51,0.5); transition: text-decoration-color .2s; }
+#about .prose a:hover, #about .callout a:hover { text-decoration-color: var(--sidm); }
 
 /* ---------- Velocity ladder (Research aims) ---------- */
 .ladder { position: relative; margin-top: 8px; }
