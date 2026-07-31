@@ -103,7 +103,7 @@
     var pubs = (window.SITE_PUBLICATIONS || []).slice();
     if (!pubs.length) {
       pubRoot.innerHTML = '<div class="empty"><div class="ico">— AWAITING FIRST RESULTS —</div>' +
-        '<p>The collaboration launches in Fall 2026. Publications will be listed here as they appear.</p></div>';
+        '<p>The collaboration launches in January 2027. Publications will be listed here as they appear.</p></div>';
     } else {
       var byYear = {};
       pubs.forEach(function (p) { (byYear[p.year] = byYear[p.year] || []).push(p); });

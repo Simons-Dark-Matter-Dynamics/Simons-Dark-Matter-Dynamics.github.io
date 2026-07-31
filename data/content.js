@@ -57,7 +57,7 @@ window.SITE_NEWS = [
      title:   "Paper title"      (required)
      venue:   "Journal / arXiv"  (optional)
      links:   { arXiv: "url", DOI: "url", ADS: "url", PDF: "url" }  (optional)
-   The collaboration launches in Fall 2026; add papers here as they appear.
+   The collaboration launches in January 2027; add papers here as they appear.
    ------------------------------------------------------------------------- */
 window.SITE_PUBLICATIONS = [
 
