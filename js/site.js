@@ -185,9 +185,10 @@
     // Compact grid card (old landing format); the whole card opens the bio modal.
     function card(p, idx) {
       var pill = p.role ? '<span class="role-pill">' + esc(p.role) + '</span>' : '';
-      return '<article class="person" role="button" tabindex="0" aria-haspopup="dialog" data-idx="' + idx + '">' +
+      return '<article class="person" role="button" tabindex="0" aria-haspopup="dialog" ' +
+        'aria-label="' + esc(p.name) + ' — view bio" data-idx="' + idx + '">' +
         '<div class="frame">' + pill +
-          '<img src="' + esc(p.photo) + '" alt="' + esc(p.name) + '" loading="lazy"></div>' +
+          '<img src="' + esc(p.photo) + '" alt="" loading="lazy"></div>' +
         '<p class="pname">' + esc(p.name) + '</p>' +
         '<p class="paffil">' + esc(p.affiliation) + '</p>' +
       '</article>';
@@ -226,7 +227,7 @@
 
     function openBio(idx) {
       var p = PEOPLE[idx]; if (!p) return;
-      dImg.src = p.photo; dImg.alt = p.name;
+      dImg.src = p.photo; dImg.alt = "";   // decorative: the name is the dialog's heading
       if (p.role) { dPill.textContent = p.role; dPill.hidden = false; } else { dPill.hidden = true; }
       dName.textContent = p.name;
       if (p.position) { dPos.textContent = p.position; dPos.hidden = false; } else { dPos.hidden = true; }
@@ -236,15 +237,9 @@
     }
     dlg.querySelector(".bio-close").addEventListener("click", function () { dlg.close(); });
     dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); }); // click on backdrop
-    // On close, <dialog> restores focus to the invoking card (which re-shows the
-    // focus outline). Defer past that restoration, then drop the focus so no
-    // highlight outline lingers around the person after exiting the bio.
-    dlg.addEventListener("close", function () {
-      setTimeout(function () {
-        var a = document.activeElement;
-        if (a && a.classList && a.classList.contains("person")) a.blur();
-      }, 0);
-    });
+    // On close, the native <dialog> restores focus to the invoking card. We keep
+    // that (correct for keyboard users); :focus-visible ensures the ring shows
+    // only for keyboard navigation, not after a mouse click.
 
     document.addEventListener("click", function (e) {
       var t = e.target.closest ? e.target.closest(".person[data-idx]") : null;
