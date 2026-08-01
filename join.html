@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>People — Targeted Simons Research Group on Dark Matter Dynamics</title>
-  <meta name="description" content="The Principal Investigators of the Targeted Simons Research Group on Dark Matter Dynamics.">
+  <title>Join Us — Targeted Simons Research Group on Dark Matter Dynamics</title>
+  <meta name="description" content="Open positions and how to get in touch with the Targeted Simons Research Group on Dark Matter Dynamics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -23,66 +23,49 @@
         <circle cx="27.8" cy="12.2" r="1.4" fill="#bcd0ec"/><circle cx="12.2" cy="27.8" r="1.4" fill="#bcd0ec"/>
         <circle cx="27.8" cy="27.8" r="2.6" fill="#ff7a33"/><circle cx="12.2" cy="12.2" r="1.4" fill="#bcd0ec"/>
       </svg>
-      <span class="wordmark">Dark Matter Dynamics<span>Targeted Simons Research Group</span></span>
+      <span class="wordmark">Dark Matter Dynamics<span>Simons Research Group</span></span>
     </a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
     <nav class="nav-links">
       <a href="index.html#about">About</a>
       <a href="index.html#research">Research</a>
-      <a href="people.html" aria-current="page">People</a>
+      <a href="people.html">People</a>
       <a href="publications.html">Publications</a>
-      <a href="news.html">News</a>
       <a href="news.html">News &amp; Events</a>
-      <a href="join.html">Join Us</a>
+      <a href="join.html" aria-current="page">Join Us</a>
     </nav>
   </header>
 
   <!-- ============ PAGE HEAD ============ -->
   <header class="page-head">
     <div class="wrap">
-<!--       <p class="eyebrow">The team</p> -->
-      <h1 class="h-display">People</h1>
-      <p>The core team of Principal Investigators draws upon expertise in particle physics, numerical simulations, and semi-analytic
-        modeling.</p>
+      <h1 class="h-display">Join Us</h1>
+      <p>We are building a collaborative, cross-institution team. We welcome inquiries from prospective
+        graduate students, postdoctoral researchers, and collaborators interested in the dynamics of
+        dark matter.</p>
     </div>
   </header>
 
   <main>
-    <!-- The three sections below are filled from data/people.js by js/site.js.
-         Edit that file to add people or bios. A section whose category has no
-         members is hidden automatically. -->
-
-    <!-- ============ PRINCIPAL INVESTIGATORS ============ -->
-    <section class="section" id="pis">
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
       <div class="wrap">
-        <div class="group-head reveal">
-          <h2 class="title">Principal Investigators</h2>
+        <div class="group-head reveal"><h2 class="title">Get in touch</h2></div>
+        <div class="reveal" style="max-width: 60ch;">
+          <p class="prose">To reach the collaboration — about opportunities, potential collaborations, or
+            general questions — email us:</p>
+          <!-- The mailto is wired from data/content.js (SITE_CONTACT.email) by js/site.js.
+               While that is empty it shows a "coming soon" note instead of a dead link. -->
+          <p><a class="contact-cta" data-contact-email href="#">Contact email coming soon</a></p>
         </div>
-        <div class="people-grid reveal" id="people-pi"></div>
       </div>
     </section>
 
-    <!-- ============ GROUP SCIENTISTS (funded) ============
-         Funded postdocs / students / research staff — roughly 4 postdoctoral
-         researchers and 6 graduate students across Princeton, UC San Diego,
-         UC Riverside, and UVA. Add them (category "scientist") in
-         data/people.js as they are named; this section stays hidden until then. -->
-    <section class="section" id="scientists">
+    <!-- ============ OPEN POSITIONS ============ -->
+    <section class="section" id="positions">
       <div class="wrap">
-        <div class="group-head reveal">
-          <h2 class="title">Group Scientists</h2>
-        </div>
-        <div class="people-grid reveal" id="people-scientist"></div>
-      </div>
-    </section>
-
-    <!-- ============ AFFILIATED COLLABORATORS (non-funded) ============  -->
-    <section class="section" id="affiliates">
-      <div class="wrap">
-        <div class="group-head reveal">
-          <h2 class="title">Affiliated Collaborators</h2>
-        </div>
-        <div class="people-grid reveal" id="people-affiliate"></div>
+        <div class="group-head reveal"><h2 class="title">Open Positions</h2></div>
+        <div class="info-stack reveal" id="jobs-list"><!-- rendered from data/content.js --></div>
       </div>
     </section>
   </main>
@@ -118,7 +101,7 @@
 
       <div class="foot-cols">
         <div>
-          <p class="foot-brand">Targeted Simons Research Group on Dark Matter Dynamics
+          <p class="foot-brand">Simons Research Group on Dark Matter Dynamics
             <span>Testing dark matter forces</span></p>
         </div>
         <div>
@@ -144,7 +127,7 @@
     </div>
   </footer>
 
-  <script defer src="data/people.js"></script>
+  <script defer src="data/content.js"></script>
   <script defer src="js/site.js"></script>
 </body>
 </html>

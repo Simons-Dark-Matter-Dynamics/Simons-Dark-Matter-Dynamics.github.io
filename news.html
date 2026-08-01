@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News — Targeted Simons Research Group on Dark Matter Dynamics</title>
-  <meta name="description" content="News and announcements from the Targeted Simons Research Group on Dark Matter Dynamics."> 
+  <title>News &amp; Events — Targeted Simons Research Group on Dark Matter Dynamics</title>
+  <meta name="description" content="News, upcoming workshops and conferences, and current activities of the Targeted Simons Research Group on Dark Matter Dynamics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -31,24 +31,41 @@
       <a href="index.html#research">Research</a>
       <a href="people.html">People</a>
       <a href="publications.html">Publications</a>
-      <a href="news.html" aria-current="page">News</a>
+      <a href="news.html" aria-current="page">News &amp; Events</a>
+      <a href="join.html">Join Us</a>
     </nav>
   </header>
 
   <!-- ============ PAGE HEAD ============ -->
   <header class="page-head">
     <div class="wrap">
-<!--      <p class="eyebrow">Updates</p> --> 
-      <h1 class="h-display">News</h1>
-<!--      <p>Announcements, meetings, and results from the collaboration. The three most recent items are
-        featured on the home page.</p> -->
+      <h1 class="h-display">News &amp; Events</h1>
+      <p>Announcements from the collaboration, upcoming workshops and conferences, and our ongoing
+        group activities.</p>
     </div>
   </header>
 
   <main>
-    <section class="section">
+    <!-- Events, Activities, and News all render from data/content.js.
+         Empty sections show a short placeholder note rather than fake content. -->
+    <section class="section" id="events">
       <div class="wrap">
-        <div class="cards grid-2 reveal" id="news-all"><!-- rendered from data/content.js --></div>
+        <div class="group-head reveal"><h2 class="title">Upcoming Events</h2></div>
+        <div class="info-grid reveal" id="events-list"><!-- workshops & conferences --></div>
+      </div>
+    </section>
+
+    <section class="section" id="activities">
+      <div class="wrap">
+        <div class="group-head reveal"><h2 class="title">Group Activities</h2></div>
+        <div class="info-grid reveal" id="activities-list"><!-- ongoing activities --></div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="wrap">
+        <div class="group-head reveal"><h2 class="title">News</h2></div>
+        <div class="cards grid-2 reveal" id="news-all"><!-- announcements --></div>
       </div>
     </section>
   </main>
@@ -93,7 +110,8 @@
           <a href="index.html#research">Research</a>
           <a href="people.html">People</a>
           <a href="publications.html">Publications</a>
-          <a href="news.html">News</a>
+          <a href="news.html">News &amp; Events</a>
+          <a href="join.html">Join Us</a>
         </div>
         <div>
           <h4>Collaboration</h4>
