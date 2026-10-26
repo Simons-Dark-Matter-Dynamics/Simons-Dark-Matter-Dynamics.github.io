@@ -134,7 +134,7 @@ window.SITE_JOBS = [
     title: "Postdoctoral Research Associate — Dark Matter Dynamics",
     place: "Princeton University · with Rutgers and Stony Brook",
     summary:
-      "A postdoctoral position in the Targeted Simons Research Group on Dark Matter Dynamics, hosted by " +
+      "A postdoctoral position hosted by " +
       "the Princeton Department of Physics with close ties to Rutgers University and Stony Brook " +
       "University (Mariangela Lisanti, Alyson Brooks, Rouven Essig). The research connects numerical " +
       "simulations, dark matter phenomenology, and current and future observations; expertise in " +
@@ -147,12 +147,12 @@ window.SITE_JOBS = [
     title: "Simons Targeted Working Group Postdoctoral Fellowship",
     place: "UC Riverside",
     summary:
-      "A two-year postdoctoral fellowship (renewable for a third year) in the Department of Physics and " +
-      "Astronomy at the University of California, Riverside, working with Hai-Bo Yu and Laura Sales (UCR), " +
-      "Manoj Kaplinghat (UC Irvine), and other members of the collaboration. The research connects " +
-      "simulations (semi-analytic, fluid, N-body, or hydrodynamical), dark matter phenomenology, galaxy " +
-      "and black hole formation in the early Universe, and small-scale structure observables. Start date " +
-      "between Summer and Fall 2027. Applications received by December 1, 2026 will receive full consideration.",
+      "A postdoctoral position in the Department of Physics and Astronomy at the University of " +
+        "California, Riverside, with close ties to UC Irvine (Hai-Bo Yu and Laura Sales at UCR; " +
+        "Manoj Kaplinghat at UC Irvine). The research connects simulations (semi-analytic, fluid, " +
+        "N-body, or hydrodynamical), dark matter phenomenology, galaxy and black hole formation in " +
+        "the early Universe, and small-scale structure observables. Start date between Summer and " +
+        "Fall 2027. Applications received by December 1, 2026 will receive full consideration.",
     link: "https://academicjobsonline.org/ajo/jobs/33190"
   }
 
