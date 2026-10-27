@@ -62,9 +62,10 @@ window.SITE_PUBLICATIONS = [
 
 /* -------------------------------------------------------------------------
    CONTACT
-   Shared email -- not sure how else to best deal with this.
+   Shared address (Cloudflare Email Routing forwards it to the collaboration).
+   Used for the Join Us mailto link and as the default contact on job listings.
    ------------------------------------------------------------------------- */
-window.SITE_CONTACT = { email: "" };
+window.SITE_CONTACT = { email: "contact@dmdynamics.org" };
 
 
 /* -------------------------------------------------------------------------
