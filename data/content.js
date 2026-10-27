@@ -31,6 +31,21 @@ window.SITE_NEWS = [
       "force. We are excited to begin this coordinated effort and to turn the coming generation of " +
       "extragalactic surveys into tests of fundamental physics.",
     link: ""
+  },
+  {
+    date: "2026-10-27",
+    tag: "Workshop",
+    title: "Save the date: SIDM Donostia 2027, June 7–18 in San Sebastián",
+    summary:
+      "SIDM Donostia 2027: Dark Matter Dynamics Across Cosmic Epochs, a two-week workshop co-organized " +
+      "by members of our collaboration, will be held at the Donostia International Physics Center (DIPC) " +
+      "in San Sebastián, Spain, from June 7 to 18, 2027. The third in the series following Pollica (2023) " +
+      "and Valencia (2025), the workshop focuses on inferring dark matter properties from its " +
+      "distribution and dynamics across cosmic scales, connecting theory and simulations to observational " +
+      "probes such as strong lensing, dwarf galaxies, stellar streams, black holes, and galaxy clustering. " +
+      "The first week offers a broad program of talks, posters, and discussion; the second is a focused " +
+      "meeting on testing self-interacting dark matter models. Registration instructions will follow.",
+    link: ""
   }
 ];
 
@@ -91,6 +106,17 @@ window.SITE_EVENTS = [
       "science goals, and connecting these to the graduate students and postdoctoral researchers who will " +
       "carry out the studies. The meeting will also establish the collaboration's logistics, including a " +
       "hiring plan and a schedule of future workshops and conferences."
+  },
+  {
+    date: "2027-06-07",
+    end:  "2027-06-18",
+    title: "SIDM Donostia 2027: Dark Matter Dynamics Across Cosmic Epochs",
+    location: "Donostia International Physics Center (DIPC) · San Sebastián, Spain",
+    abstract:
+      "A two-week workshop on inferring dark matter properties from its distribution and dynamics " +
+      "across cosmic scales, co-organized by members of our collaboration. Week one is a broad program " +
+      "of talks, posters, and discussion; week two is a focused meeting on testing self-interacting " +
+      "dark matter models. Registration details to be announced."
   }
 
   /* Template — copy this block for each new event:
