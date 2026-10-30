@@ -157,8 +157,20 @@ window.SITE_ACTIVITIES = [
      email:   "name@inst.edu"  (optional — contact; else uses SITE_CONTACT.email)
    ------------------------------------------------------------------------- */
 window.SITE_JOBS = [
+    {
+      title: "Postdoctoral Research Associate",
+      place: "University of Virginia · with University of Maryland",
+      summary:
+        "A postdoctoral position hosted by " +
+        "the University of Virginia with close ties to the University of Maryland " +
+        "(Paul Torrey & Benedikt Diemer). The research connects simulations (with an emphasis on " +
+        "N-body, hydrodynamical, or semi-analytic modeling) of dark matter phenomenology and galaxy  formation. " +
+        "Start date between Summer and Fall 2027. Applications received by " +
+        "December 1, 2026 will receive full consideration.",
+      link: "https://aas.org/jobregister/ad/2bf596ac"
+    }
   {
-    title: "Postdoctoral Research Associate — Dark Matter Dynamics",
+    title: "Postdoctoral Research Associate",
     place: "Princeton University · with Rutgers and Stony Brook",
     summary:
       "A postdoctoral position hosted by " +
@@ -171,7 +183,7 @@ window.SITE_JOBS = [
     link: "https://academicjobsonline.org/ajo/jobs/33179"
   },
   {
-    title: "Simons Targeted Working Group Postdoctoral Fellowship",
+    title: "Postdoctoral Research Associate",
     place: "UC Riverside",
     summary:
       "A postdoctoral position in the Department of Physics and Astronomy at the University of " +
