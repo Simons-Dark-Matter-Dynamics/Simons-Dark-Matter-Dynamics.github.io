@@ -168,7 +168,7 @@ window.SITE_JOBS = [
         "Start date between Summer and Fall 2027. Applications received by " +
         "December 1, 2026 will receive full consideration.",
       link: "https://aas.org/jobregister/ad/2bf596ac"
-    }
+    },
   {
     title: "Postdoctoral Research Associate",
     place: "Princeton University · with Rutgers and Stony Brook",
