@@ -98,7 +98,7 @@ window.SITE_EVENTS = [
     date: "2026-10-26",
     end:  "2026-10-27",
     title: "First Annual Collaboration Meeting",
-    location: "U.S. East Coast · venue to be announced",
+    location: "Princeton University",
     abstract:
       "The collaboration's first official meeting brings its Principal Investigators together for two days " +
       "of scientific and logistical planning. Discussions will shape a scientific implementation plan — " +
